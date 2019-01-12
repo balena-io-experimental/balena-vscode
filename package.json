@@ -39,6 +39,10 @@
 			{
 				"command": "extension.balenaListApplications",
 				"title": "Balena: List Applications"
+			},
+			{
+				"command": "extension.balenaDeleteApplication",
+				"title": "balenaCloud: Delete Application"
 			}
 		]
 	},
