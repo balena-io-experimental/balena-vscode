@@ -39,10 +39,7 @@ export class BalenaApplicationsProvider implements vscode.TreeDataProvider<Balen
             return response.json();
         })
         .then(payload => {
-            //console.log(payload.d);
-            return payload.d.map(item => {
-                return new BalenaApplication(item.id, item.id, item.app_name);
-            });
+            return payload.d.map(item => new BalenaApplication(item.id, item.id, item.app_name));
         });
     }
 }
