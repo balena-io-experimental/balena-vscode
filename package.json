@@ -14,7 +14,8 @@
 	],
 	"activationEvents": [
 		"onView:balena-cloud-applications",
-		"onCommand:extension.balenaListApplications"
+		"onCommand:balenaCloud.ListApplications",
+		"onCommand:balenaCloud.DeleteApplication"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -37,11 +38,11 @@
 		},
 		"commands": [
 			{
-				"command": "extension.balenaListApplications",
+				"command": "balenaCloud.ListApplications",
 				"title": "Balena: List Applications"
 			},
 			{
-				"command": "extension.balenaDeleteApplication",
+				"command": "balenaCloud.DeleteApplication",
 				"title": "balenaCloud: Delete Application"
 			}
 		]
@@ -54,6 +55,7 @@
 	},
 	"dependencies": {
 		"@types/node-fetch": "^2.1.4",
+		"balena-sdk": "^11.4.0",
 		"node-fetch": "^2.3.0"
 	},
 	"devDependencies": {
