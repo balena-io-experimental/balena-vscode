@@ -24,8 +24,11 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Listing balenaCloud applications!');
 	});
 
-	BalenaDeleteApplication();
-	context.subscriptions.push(disposable);
+	// Add all dispoable objects here. Disposable is returned from the registerCommand() function.
+	context.subscriptions.push(
+		disposable, 
+		BalenaDeleteApplication()
+	);
 }
 
 // this method is called when your extension is deactivated
