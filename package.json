@@ -55,7 +55,6 @@
 	},
 	"dependencies": {
 		"@types/node-fetch": "^2.1.4",
-		"balena-sdk": "^11.4.0",
 		"node-fetch": "^2.3.0"
 	},
 	"devDependencies": {
