@@ -1,13 +1,15 @@
 # Purpose: Installs the Balena extension for Microsoft Visual Studio Code
 
+$ProjectRoot = "$PSScriptRoot/.."
+
 # Clean up old .vsix packages
-Remove-Item -Path $PSScriptRoot\* -Filter *.vsix
+Remove-Item -Path $ProjectRoot/* -Filter *.vsix
 
 # Package the extension into a new .vsix file
-Start-Process -Wait -FilePath vsce -ArgumentList 'package' -WorkingDirectory $PSScriptRoot
+Start-Process -Wait -FilePath vsce -ArgumentList 'package' -WorkingDirectory $ProjectRoot
 
 # Get the packaged .vsix file
-$ExtensionPath = @(Get-ChildItem -Path $PSScriptRoot -Filter *.vsix)[0]
+$ExtensionPath = @(Get-ChildItem -Path $ProjectRoot -Filter *.vsix)[0]
 
 # Install the Visual Studio Code extension, using its fully-qualified filesystem path
 if ($ExtensionPath) {
