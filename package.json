@@ -14,8 +14,7 @@
 	],
 	"activationEvents": [
 		"onView:balena-cloud-applications",
-		"onCommand:balenaCloud.ListApplications",
-		"onCommand:balenaCloud.DeleteApplication"
+		"onCommand:balenaCloud.ListApplications"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -64,5 +63,6 @@
 		"typescript": "^2.6.1",
 		"vsce": "^1.54.0",
 		"vscode": "^1.1.22"
-	}
+	},
+	"icon": "media/balena_icon_256px_square.png"
 }
