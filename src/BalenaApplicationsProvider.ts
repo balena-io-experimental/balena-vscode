@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
-import { BalenaApplication } from './BalenaApplication';
+import { BalenaApplication } from './models/BalenaApplication';
 
 export class BalenaApplicationsProvider implements vscode.TreeDataProvider<BalenaApplication> {
 

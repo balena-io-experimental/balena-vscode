@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { BalenaApplication } from './BalenaApplication';
+import { BalenaApplication } from './models/BalenaApplication';
 //import * as balena from 'balena-sdk';
 
 export function BalenaDeleteApplication() {
