@@ -14,7 +14,8 @@
 	],
 	"activationEvents": [
 		"onView:balena-cloud-applications",
-		"onCommand:balenaCloud.ListApplications"
+		"onCommand:balenaCloud.ListApplications",
+		"onCommand:balenaCloud.DeleteApplication"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -37,12 +38,20 @@
 		},
 		"commands": [
 			{
+				"command": "balenaEtcher.FlashDevice",
+				"title": "balenaEtcher: Flash Device"
+			},
+			{
 				"command": "balenaCloud.ListApplications",
-				"title": "Balena: List Applications"
+				"title": "balenaCloud: List Applications"
 			},
 			{
 				"command": "balenaCloud.DeleteApplication",
 				"title": "balenaCloud: Delete Application"
+			},
+			{
+				"command": "balenaCloud.InstallCLI",
+				"title": "balenaCloud: Install CLI"
 			}
 		]
 	},
